@@ -1,7 +1,14 @@
-import React from 'react'
-// import { Link } from 'react-router-dom';
+import React, {useEffect} from 'react'
+import { Link } from 'react-router-dom';
 
 const Quiz = () => {
+    useEffect(() => {
+        const interval = setInterval(() => {
+          console.log('This will run every second!');
+        }, 1000);
+        return () => clearInterval(interval);
+      }, []);
+
   return (
     <div>
         <div className='flex justify-center'>
@@ -19,7 +26,7 @@ const Quiz = () => {
             </div>
         </div>
 
-        <div className='flex justify-center'>
+        <div className='flex justify-center pt-5'>
         <div className="w-64 carousel rounded-box">
             <div id="slide1" className="carousel-item relative w-full">
                 <div className="card w-96 bg-neutral text-neutral-content">
@@ -27,8 +34,8 @@ const Quiz = () => {
                         <h2 className="card-title">Question 1</h2>
                         <p>We are using cookies for no reason.</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Accept</button>
-                            <button className="btn btn-ghost">Deny</button>
+                            <button className="btn btn-primary">True</button>
+                            <button className="btn btn-ghost">False</button>
                         </div>
                     </div>
                 </div>
@@ -43,8 +50,8 @@ const Quiz = () => {
                         <h2 className="card-title">Question 2</h2>
                         <p>We are using cookies for no reason.</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Accept</button>
-                            <button className="btn btn-ghost">Deny</button>
+                            <button className="btn btn-primary">True</button>
+                            <button className="btn btn-ghost">False</button>
                         </div>
                     </div>
                 </div>
@@ -60,8 +67,8 @@ const Quiz = () => {
                         <h2 className="card-title">Question 3</h2>
                         <p>We are using cookies for no reason.</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Accept</button>
-                            <button className="btn btn-ghost">Deny</button>
+                            <button className="btn btn-primary">True</button>
+                            <button className="btn btn-ghost">False</button>
                         </div>
                     </div>
                 </div>
@@ -77,8 +84,8 @@ const Quiz = () => {
                         <h2 className="card-title">Question 4</h2>
                         <p>We are using cookies for no reason.</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Accept</button>
-                            <button className="btn btn-ghost">Deny</button>
+                            <button className="btn btn-primary">True</button>
+                            <button className="btn btn-ghost">False</button>
                         </div>
                     </div>
                 </div>
@@ -94,8 +101,8 @@ const Quiz = () => {
                         <h2 className="card-title">Question 5</h2>
                         <p>We are using cookies for no reason.</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Accept</button>
-                            <button className="btn btn-ghost">Deny</button>
+                            <button className="btn btn-primary">True</button>
+                            <button className="btn btn-ghost">False</button>
                         </div>
                     </div>
                 </div>
@@ -107,7 +114,7 @@ const Quiz = () => {
         </div>
 
         <div className='flex justify-center pt-5'>
-            <button className="btn btn-primary">Submit Quiz</button>
+            <button className="btn btn-primary"><Link to={'/score'}>Submit Quiz</Link></button>
         </div>
     </div>
   )
