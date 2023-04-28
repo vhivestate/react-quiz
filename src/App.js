@@ -7,11 +7,13 @@ import Score from './pages/Score';
 
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import Timer from './components/Timer';
 
 function App() {
   return (
     <Router>
       <Nav/>
+      <Timer/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="quiz" element={<Quiz/>}/>

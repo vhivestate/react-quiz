@@ -23,8 +23,8 @@ function ScoreKeeper() {
             <div id="slide1" className="carousel-item relative w-full">
                 <div className="card w-96 bg-neutral text-neutral-content">
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">Question 1</h2>
-                        <p>???????</p>
+                        <h2 className="card-title"> 1. True or False:</h2>
+                        <p>Any Boolean expression can be represented by a truth table</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary"  onClick={incrementScore}>True</button>
                             <button className="btn btn-ghost" onClick={decrementScore}>False</button>
@@ -39,11 +39,11 @@ function ScoreKeeper() {
             <div id="slide2" className="carousel-item relative w-full">
                 <div className="card w-96 bg-neutral text-neutral-content">
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">Question 2</h2>
-                        <p>We are using cookies for no reason.</p>
+                        <h2 className="card-title">2. True or False:</h2>
+                        <p>In hardware, the next step up from the transistor was the transmitter.</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">True</button>
-                            <button className="btn btn-ghost">False</button>
+                            <button className="btn btn-primary" onClick={decrementScore}>True</button>
+                            <button className="btn btn-ghost" onClick={incrementScore}>False</button>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ function ScoreKeeper() {
         </div>
       </div>
       {/* end of quiz section */}
-      
+
     </div>
   );
 }
