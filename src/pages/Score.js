@@ -13,9 +13,9 @@ function ScoreKeeper() {
 
   return (
     <div>
-      <h1>Score: {score}</h1>
-      <button onClick={incrementScore}>Increase Score</button>
-      <button onClick={decrementScore}>Decrease Score</button>
+      <h1 className='flex flex-wrap text-5xl text-center'>Score: {score}</h1>
+      <button className='btn glass' onClick={incrementScore}>Increase Score</button>
+      <button className='btn glass' onClick={decrementScore}>Decrease Score</button>
     </div>
   );
 }
