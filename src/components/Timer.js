@@ -48,9 +48,9 @@ function ScorePage() {
 
       <h2>Your score is:
       </h2>
-      {/* display the score */}
+      {/* display the score maybe also remove cards*/}
 
-      
+
       <div id='quizSection'>
       <div className='flex justify-center pt-5'>
         <div className="w-64 carousel rounded-box">
